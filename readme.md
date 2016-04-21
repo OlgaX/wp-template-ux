@@ -1,4 +1,4 @@
-[Demo](http://http://demo-ux.onedayessay.net/)
+[Demo](http://demo-ux.onedayessay.net/)
 
 ### Установка дополнительных инструментов для разработки wp-тем:
 1. Автоматическая перезагрузка страниц в браузере во время работы с файлами WP-темы (css, php, images, etc.)
