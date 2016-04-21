@@ -1,0 +1,141 @@
+/*HEADER: LAYOUT*/
+.site_header {
+	flex-shrink: 0;
+	z-index: 10000;
+	&.fixed {
+		position: fixed;
+		width: 100%;
+		transition: top 0.5s;
+	}
+	&-top {
+		padding: 5px 0;
+		background: @c3;
+	}
+	&-bottom {
+		border-bottom: 2px solid @c3;
+		background: lighten(@c3, 10%);
+		position: relative;
+	}
+}
+
+/*HEADER: LOGO*/
+.site_logo {
+	a{
+		color: #bbb;
+		&:hover, &:active, &:focus{
+			color: #fff;
+		}
+	}
+}
+
+/*HEADER: HEADER-PHONE*/
+.site_h-phone {
+	display: inline-block;
+	vertical-align: middle;
+	clear: both;
+	padding-left: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: url(img/24x7.svg) no-repeat 0 50%;
+}
+
+/*HEADER: SIGN-IN BUTTON*/
+.site_sign-in-btn {
+	margin-top: 5px;
+	a {
+		padding: 5px 10px;
+		font-size: 14px;
+	}
+}
+
+/*HEADER: NAV*/
+.site_nav, .mobile-nav {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+	}
+	a {
+		display: inline-block;
+		padding: 5px;
+		color: #bbb;
+	}
+	a:hover, a:active, a:focus,
+	.current-menu-item a,
+	.current_page_item a {
+		color: #fff;
+	}
+}
+.mobile-nav {
+	display: none;
+	&-visible {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+/*HEADER: NAV-ORDER BUTTON*/
+.nav-order {
+	a {
+		border: 1px solid @c1;
+		&:hover, &:active, &:focus {color: #fff;}
+	}
+}
+
+/*HEADER: SLICKNAV MENU*/
+.slicknav {
+	&_menu {
+		display: inline-block;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+	&_open .slicknav_icon-bar{background: #fff;}
+	&_btn {
+		float: right;
+		font: 700 16px/20px Arial, sans-serif;
+		z-index: 10000000;
+	}
+	&_menutxt, &_icon {
+		float: left;
+	}
+	&_menutxt {
+		display: none;
+	}
+	&_icon-bar {
+		display: block;
+		width: 1.5em;
+		height: 0.125em;
+		margin: 3px;
+		background: #bbb;
+	}
+	&_nav {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		z-index: 10;
+		width: 100%;
+		padding: 2% 0;
+		clear: both;
+		background: lighten(@c3, 10%);
+		background: rgba(red(@c3), green(@c3), blue(@c3), 0.85);
+		border-bottom: 2px solid @c3;
+		text-transform: uppercase;
+		text-align: center;
+		max-height: 200px;
+		overflow: auto;
+		li{
+			display: block;
+		}
+	}
+}
+@media (max-width: 991px) {
+	.mobile-nav {
+		display: block;
+	}
+	.site_nav {
+		display: none;
+	}
+}

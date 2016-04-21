@@ -1,0 +1,48 @@
+/*BUTTONS: BIG-BTN*/
+.site_big-btn {
+	padding: 16px 20px;
+	border: 2px solid @c1;
+	background: @c1;
+	color: #fff;
+	transition: all 0.2s ease;
+	font: 400 20px/1.25 Arial, sans-serif;
+	&:hover, &:active, &:focus {
+		background: @c2 !important;
+		border-color: @c2 !important;
+		color: #fff !important;
+	}
+}
+
+/*BUTTONS: MORE-LINK (modified "big-btn")*/
+.site_more-btn {
+		padding: 5px 10px;
+		font-size: 16px;
+		min-width: inherit;
+	&-wrap {
+		text-align: right;
+		line-height: 1;
+	}
+}
+
+/*BUTTONS: PAGE SCROLL-TOP
+-------------------------------------------------*/
+.scroll-button {
+	@size: 50px;
+	position: fixed;
+	z-index: 1;
+	right: 40px;
+	bottom: 60px;
+	width: @size;
+	height: @size;
+	text-align: center;
+	color: #fff;
+	background: @c1;
+	cursor: pointer;
+	transition: 0.3s;
+	opacity: 0.5;
+	&:hover, &:active, &:focus {opacity: 1;}
+	&:before {
+		content: "\e802";
+		font: 24px/@size 'fontello';
+	}
+}

@@ -1,0 +1,31 @@
+.site_services-info {
+	padding: 30px 0;
+	.items-wrap {
+		margin-bottom: -40px;
+		overflow: hidden;
+	}
+	.item {
+		max-width: 360px;
+		margin: 0 auto 40px;
+		text-align: center;
+	}
+	.icon {
+		margin-bottom: 15px;
+		font-size: 32px;
+	}
+	.title {
+		&:extend(.h4);
+		margin-bottom: 15px;
+	}
+	.text {}
+}
+
+/*SERVICES-INFO: RESPONSIVE*/
+.site_services-info {
+	@media (min-width: @min-sm) and (max-width: @min-lg) {
+		.col-3, .col-5 {clear: both;}
+	}
+	@media (min-width: @min-lg) {
+		.col-4 {clear: both;}
+	}
+}

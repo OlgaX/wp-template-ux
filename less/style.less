@@ -1,0 +1,103 @@
+@import "variables";
+
+/*!
+Theme Name: WP-template UX
+Author: OlgaX by SeoPro
+*/
+
+//TMP STILES (don`t forget remove me!)
+.tmp-placeholder {
+	margin: 20px 0;
+	padding: 80px 0;
+	font-size: 40px;
+	text-align: center;
+	border: 4px dashed #ddd;
+}
+
+//FONTs
+@import (inline) 'include/fontello.css';
+
+/*COMMON RULES
+-------------------------------------------------*/
+@import "include/common";
+
+/*TYPOGRAPHY
+-------------------------------------------------*/
+@import "include/typography";
+
+/*BUTTONS
+-------------------------------------------------*/
+@import "include/buttons";
+
+/*HEADER
+-------------------------------------------------*/
+@import "include/header";
+
+/*FOOTER
+-------------------------------------------------*/
+@import "include/footer";
+
+/*SIDEBAR
+-------------------------------------------------*/
+@import "include/sidebar";
+
+/*TOP-BLOCK
+-------------------------------------------------*/
+@import "include/inc-top-block";
+
+/*CALCULATOR
+-------------------------------------------------*/
+@import "include/inc-calculator";
+
+/*SERVICES-INFO
+-------------------------------------------------*/
+@import "include/inc-services-info";
+
+/*SAMPLES
+-------------------------------------------------*/
+@import "include/inc-samples";
+
+/*COUNTERS
+-------------------------------------------------*/
+@import "include/inc-counters";
+
+/*PARTNERS
+-------------------------------------------------*/
+@import "include/inc-partners";
+
+/*ORDER-STEPS
+-------------------------------------------------*/
+@import "include/inc-order-steps";
+
+/*DISCOUNT-FORM
+-------------------------------------------------*/
+@import "include/inc-discount-form";
+
+/*PRICES-INFO (on page: prices)
+-------------------------------------------------*/
+@import "include/inc-prices-info";
+
+/*PAGE: FRONT-PAGE
+-------------------------------------------------*/
+@import "include/tpl-front-page";
+
+/*PAGE: BLOG
+-------------------------------------------------*/
+@import "include/tpl-blog";
+
+/*PAGE: 404
+-------------------------------------------------*/
+@import "include/tpl-404";
+
+/*CUSTOM SCROLLBAR
+-------------------------------------------------*/
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background: @c3;
+}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+	background: @c1;
+}

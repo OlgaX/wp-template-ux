@@ -1,0 +1,70 @@
+/*FOOTER: LAYOUT*/
+.site_footer {
+	background: @c3;
+	padding: 15px 0;
+	flex-shrink: 0;
+	&-top, &-center, &-bottom {
+		margin-bottom: 15px;
+	}
+}
+
+/*FOOTER: FOOTER-MENU*/
+.site_f-menu {
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin: 5px;
+	}
+	a {color: #bbb;}
+	a:hover, a:focus, a:active,
+	.current-menu-item a,
+	.current_page_item a {color: #fff;}
+}
+
+/*FOOTER: TERMS*/
+
+.site_terms {
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin: 5px;
+	}
+	a {
+		font-size: 13px;
+		color: #777;
+		&:hover {color: #bbb;}
+	}
+}
+
+/*FOOTER: COPYRIGHT*/
+.site_copyright {
+	font-size: 13px;
+	color: #777;
+}
+
+/*FOOTER: RESPONSIVE*/
+@media only screen and (max-width: @max-lg) {
+	.site_payments,
+	.site_copyright,
+	.site_f-phone {
+		text-align: center;
+		margin: 5px auto;
+	}
+	.site_footer-center .row{
+		display: flex;
+		flex-direction: column;
+		> div:first-child {
+			order: 1;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.site_top-block {
+	padding: 50px 0 80px;
+	background: @c3 url(img/slider-bg.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+	&-content {
+		display: block;
+		margin: 0 60px 40px 60px;
+		font-size: 40px;
+		color: #eee;
+		overflow: hidden;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		position: static;
+	}
+	li{
+		list-style-type: none;
+		display: none;
+		&:first-child {display: block;}
+	}
+}
+
+/*TOP-BLOCK: SLIDER PAGER*/
+.site_top-block {
+	.owl-dots {
+		position: absolute;
+		left: 0;
+		bottom: 15px;
+		width: 100%;
+		text-align: center;
+	}
+	.owl-dot {
+		display: inline-block;
+		vertical-align: middle;
+		width: 12px;
+		height: 12px;
+		margin: 5px;
+		background: @c1;
+		opacity: 0.5;
+		&:hover, &:focus, &:active, &.active {opacity: 1;}
+	}
+}
+
+/*TOP-BLOCK: SLIDER NEXT/PREV BUTTONS*/
+.site_top-block {
+	.owl-next, .owl-prev {
+		position: absolute;
+		top: 50%;
+		width: 30px;
+		height: 40px;
+		margin-top: -20px;
+		font-size: 25px;
+		color: @c1;
+		opacity: 0.5;
+		&:hover, &:focus, &:active, &.active {opacity: 1;}
+	}
+	.owl-next {right: 15px;}
+	.owl-prev {left: 15px;}
+}
