@@ -132,31 +132,42 @@ $('.counter').counterUp({
 			fixedClass = 'fixed',
 			minMarginTop;
 
-	if(fixedItem.size()){
-		var scrollTopValue = function(){return $(window).scrollTop()};
+	if (fixedItem.size()){
+		var scrollTopValue = function() {
+			return $(window).scrollTop()
+		};
 
-		var toggleFixedItem = function(){
+		var fixedFunc = function() {
+			fixedItem.addClass(fixedClass).css({top: 0});
+			$('body').css({marginTop:minMarginTop})
+		};
+
+		var unfixedFunc = function() {
+			fixedItem.removeClass(fixedClass).css({top:-minMarginTop});
+			$('body').css({marginTop:0});
+		};
+
+		var toggleFixedFunc = function() {
 			if ($(window).width() < 468) {
-				fixedItem.removeClass(fixedClass).css({top:-minMarginTop});
-				$('body').css({marginTop:0});
+				unfixedFunc();
 				return;
 			};
 
 			minMarginTop = fixedItem.height();
-			if ( scrollTopValue() < minMarginTop*2 && scrollTopValue() > minMarginTop){
-				fixedItem.addClass(fixedClass).css({top:-minMarginTop});
-				$('body').css({marginTop:minMarginTop})
-			}
-			else if ( scrollTopValue() >= minMarginTop*2){
-				fixedItem.css({top:0});
-			}
-			else {
-				fixedItem.removeClass(fixedClass).css({top:-minMarginTop});
-				$('body').css({marginTop:0});
-			}
-		}
 
-		$(window).scroll(toggleFixedItem);
-		$(window).resize(toggleFixedItem);
+			if ( scrollTopValue() > minMarginTop && scrollTopValue() < minMarginTop * 2) {
+				fixedFunc();
+			}
+			else if (scrollTopValue() === 0) {
+				unfixedFunc();
+			}
+		};
+
+		if ($(window).width() >= 468) {
+			fixedFunc();
+		};
+
+		$(window).scroll(toggleFixedFunc);
+		$(window).resize(toggleFixedFunc);
 	}
 })(jQuery);
